@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "especie": "Perro",
+    "color": "Cafecito",
+    "edad": 7,
+    "sexo": "macho",
+    "img": [
+      "/img/pets/img-1792685081675-db5a6542b963.jpg"
+    ]
+  }
+]

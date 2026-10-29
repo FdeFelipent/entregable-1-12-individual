@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09251d">
+  <title>Macotafy | Mascotas y sus familias</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="/img/macotafy-logo.png" alt="Logo de Macotafy">
+        <div><div class="brand-name">Macotafy</div><div class="brand-caption">Una familia para cada mascota</div></div>
+      </div>
+      <p class="side-label">Explorar</p>
+      <nav class="nav" aria-label="Secciones">
+        <button class="nav-button active" type="button" data-resource="users"><span class="nav-symbol" aria-hidden="true">◉</span>Usuarios</button>
+        <button class="nav-button" type="button" data-resource="pets"><span class="nav-symbol" aria-hidden="true">⌂</span>Mascotas</button>
+      </nav>
+      <div class="side-bottom">
+          <div class="connection"><span class="connection-dot" id="connectionDot"></span><span id="connectionText">Conectando…</span></div>
+        <p class="side-note">Tus registros se guardan al crear.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="crumb"><span>Panel</span><span aria-hidden="true">/</span><strong id="crumbCurrent">Usuarios</strong></div>
+        <div class="top-actions">
+          <span class="api-address">Hola, bienvenido/a</span>
+          <button class="refresh-button" id="refreshButton" type="button"><span aria-hidden="true">↻</span>Actualizar</button>
+        </div>
+      </div>
+
+      <div class="page" id="page">
+        <section class="heading">
+          <div>
+            <p class="eyebrow">Conoce a tu próximo mejor amigo</p>
+            <h1 id="pageTitle">Usuarios</h1>
+            <p class="heading-copy" id="pageCopy">Encuentra personas y mascotas que forman parte de nuestra comunidad.</p>
+          </div>
+          <span class="resource-tag" id="routeTag">Hecho con cariño <span aria-hidden="true">♥</span></span>
+        </section>
+
+        <section class="metrics" aria-label="Resumen de registros">
+          <div class="metric"><div><div class="metric-label">Personas</div><div class="metric-value" id="usersMetric">—</div></div><span class="metric-icon" aria-hidden="true">◉</span></div>
+          <div class="metric"><div><div class="metric-label">Mascotas</div><div class="metric-value" id="petsMetric">—</div></div><span class="metric-icon" aria-hidden="true">⌂</span></div>
+          <div class="metric"><div><div class="metric-label">Fotos</div><div class="metric-value" id="imagesMetric">—</div></div><span class="metric-icon" aria-hidden="true">▧</span></div>
+        </section>
+
+        <section class="workspace">
+          <div class="panel">
+            <div class="panel-head">
+              <div><h2 class="panel-title" id="listTitle">Personas de la comunidad</h2><p class="panel-subtitle" id="listSubtitle">Conoce a quienes ya son parte de Macotafy</p></div>
+              <span class="result-count" id="resultCount">0 registros</span>
+            </div>
+            <div class="record-list" id="recordList" aria-live="polite"></div>
+          </div>
+
+          <section class="panel form-panel" aria-labelledby="formTitle">
+            <div class="panel-head">
+              <div><h2 class="panel-title" id="formTitle">Crear perfil</h2><p class="panel-subtitle" id="formSubtitle">Completa tus datos para unirte</p></div>
+            </div>
+            <div class="form-body" id="formBody"></div>
+          </section>
+        </section>
+
+      </div>
+      <footer class="footer"><span>Macotafy · un hogar también se encuentra aquí.</span><span>Hecho con cariño para personas y mascotas.</span></footer>
+    </main>
+  </div>
+  <div class="notice" id="notice" role="status" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

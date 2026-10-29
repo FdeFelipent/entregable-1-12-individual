@@ -1,0 +1,15 @@
+{
+  "name": "ejercicio-api-usuarios-mascotas",
+  "version": "1.0.0",
+  "description": "API REST de usuarios y mascotas con archivos JSON y carga de imagenes",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --watch src/index.js",
+    "start:prod": "node src/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "^5.3.0",
+    "multer": "^2.4.0"
+  }
+}
